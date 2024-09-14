@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} Scarleth Bazaes {% endblock title %}</title>
+    {% load static %}
+    {% load compress %}
+    {% compress css %}
+    <link type="text/x-scss" href="{% static 'scss/bootstrap.scss' %}" rel="stylesheet" media="screen">
+    {% endcompress %}
+</head>
+<body class="container-fluid p-3 bg-primary text-white">
+    <ul class="nav nav-tabs nav-justified bg-primary">
+        <li class="nav-item">
+            <a class="nav-link text-secondary" style="font-size: 140%;" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary" style="font-size: 140%;"href="aboutme">Work experience</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary" style="font-size: 140% ;" href="education">Education</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary" style="font-size: 140% ;" href="projects">Projects</a>
+        </li>
+    </ul>
+    <div class="container-fluid p-4 mt-5 bg-primary">{% block page_content %}{% endblock page_content %}</div>
+    <footer class="text-center fixed-bottom bg-primary">
+        <!-- Grid container -->
+        <div class="container-fluid p-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://www.instagram.com/scar.leth_/?hl=es-la" role="button" target="_blank">
+              <img src="static/images/instagram.png">
+            </a>
+      
+            <!-- Google -->
+            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://github.com/Scarl3th" role="button" target="_blank"
+              ><img src="static/images/github.png">
+            </a>
+      
+            <!-- Instagram -->
+            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="mailto:scarleth_bazaes@hotmail.com" role="button" target="_blank"
+              ><img src="static/images/email.png">
+            </a>
+      
+            <!-- Linkedin -->
+            <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://www.linkedin.com/in/scarleth-bazaes-3644b325a/" role="button" target="_blank"
+              ><img src="static/images/linkedin.png">
+            </a>
+            
+          </section>
+        </div>
+    </footer>
+</body>
+</html>

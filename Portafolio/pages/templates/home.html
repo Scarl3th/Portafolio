@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<!--Left side text-->
+<div class="container-fluid" onload="typeWriter()">
+    <div class="row">
+        <div class="col">
+            <h3>Hi, I'm</h3>
+            <h1 class="h1 text-secondary" style="font-size: 400%; font-family: monospace;"><span class="auto-type"></span></h1>
+            <h1>A Software Engineer</h1>
+            <p style="padding-top: 5%; font-size: 130%;">I'm a fourth year Civil Computer Engineering student at Universidad Técnica Federico Santa María. I have a great sense of responsability, will to colaborate, learn, acquire experience and grow as a person/proffesional.</p>
+            <p style="font-size: 130%;">Working with a team, I relate with my coworkers keeping empathy and respect as a priority. I am passionate about what I do, and usually I am the one who motivates the team to keep Working towards our goal</p>
+        </div>
+        <div class="col">
+            <img src="static/images/me_logo.jpg" class="rounded mx-auto d-block" style="max-height: 60%; max-width: 90%;">
+        </div>
+</div>
+
+<!--Typing Effect-->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed(".auto-type", {
+        strings: ["Scarleth Bazaes,"],
+        typeSpeed: 120,
+        backSpeed: 50,
+        loop: true
+    })
+</script>
+
+{% endblock page_content %}
+
